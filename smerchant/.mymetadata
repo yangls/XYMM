@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="smerchant"
+  id="myeclipse.1430060991156"
+  context-root="/smerchant"
+  j2ee-spec="5.0"
+  archive="smerchant.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

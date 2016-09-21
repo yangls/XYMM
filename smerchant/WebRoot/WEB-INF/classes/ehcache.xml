@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false">
+
+	<diskStore path="java.io.tmpdir" />
+	
+	<!-- 默认缓存 -->
+	<defaultCache maxElementsInMemory="10000" overflowToDisk="true"
+		eternal="false" memoryStoreEvictionPolicy="LRU" maxElementsOnDisk="10000000"
+		diskExpiryThreadIntervalSeconds="300" timeToIdleSeconds="3600"
+		timeToLiveSeconds="100000" diskPersistent="false"  />
+		
+	<!-- 临时缓存
+	name:缓存名称
+	maxElementsInMemory:缓存最大个数
+	eternal:对象是否永久有效
+	overflowToDisk:当内存中对象数量达到maxElementsInMemory时，将对象写到磁盘中
+	timeToIdleSeconds:置对象在失效前的允许闲置时间（单位：秒）。
+	timeToLiveSeconds:设置对象在失效前允许存活时间（单位：秒）。最大时间介于创建时间和失效时间之间
+	 -->
+	 
+	 <!-- api登录Token缓存 -->
+	
+	 <!-- 用户验证码缓存 -->
+	<cache name="phoneMsg" maxElementsInMemory="5000"
+		overflowToDisk="true" eternal="false" timeToIdleSeconds="3000"
+		timeToLiveSeconds="600">
+	</cache>
+	
+	 <!-- 用户Token缓存 -->
+	<cache name="tokenMsg" maxElementsInMemory="5000"
+		overflowToDisk="true" eternal="false" timeToIdleSeconds="1200"
+		timeToLiveSeconds="600">
+	</cache>
+	
+</ehcache>
